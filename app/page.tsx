@@ -1,0 +1,258 @@
+import Link from "next/link";
+import { ArrowRight, BarChart2, Users, BookOpen, Brain, Target, Lightbulb } from "lucide-react";
+
+export default function Home() {
+  return (
+    <div className="min-h-screen">
+      <header className="bg-white/80 backdrop-blur-md shadow-sm fixed w-full z-50">
+        <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
+          <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+            ReeOrg
+          </Link>
+          <div className="hidden md:flex gap-6 items-center">
+            <Link href="#features" className="text-gray-600 hover:text-purple-600 transition-colors">Features</Link>
+            <Link href="#benefits" className="text-gray-600 hover:text-purple-600 transition-colors">Benefits</Link>
+            <Link href="#about" className="text-gray-600 hover:text-purple-600 transition-colors">About</Link>
+            <Link href="#contact" className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full hover:opacity-90 transition-all">
+              Contact Us
+            </Link>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        {/* Hero Section */}
+        <section className="pt-32 pb-20 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-blue-50 to-white -z-10"></div>
+          <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-purple-100/30 to-transparent rounded-full blur-3xl -z-10"></div>
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                Reimagine Your Organization
+              </h1>
+              <p className="text-xl text-gray-600 mb-8">
+                ReeOrg empowers you to analyze skills, optimize team structures, and make data-driven talent decisions that transform your organization. Our AI-powered platform helps you build stronger, more efficient teams.
+              </p>
+              <div className="flex gap-4 justify-center">
+                <Link 
+                  href="#contact"
+                  className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full hover:opacity-90 transition-all flex items-center group"
+                >
+                  Get Started 
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  href="#features"
+                  className="bg-white text-gray-800 px-8 py-4 rounded-full hover:bg-gray-50 transition-all border border-gray-200"
+                >
+                  Learn More
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section id="features" className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-4">Powerful Features</h2>
+            <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+              Our comprehensive suite of tools helps you understand and optimize your organization's talent landscape.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="p-8 bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                  <BarChart2 className="h-6 w-6 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-bold mb-4">Skills Analytics</h3>
+                <p className="text-gray-600 mb-4">
+                  Gain deep insights into your workforce capabilities with AI-powered analytics and real-time skill tracking.
+                </p>
+                <ul className="space-y-2 text-gray-600">
+                  <li className="flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 bg-purple-600 rounded-full"></div>
+                    Skill gap analysis
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 bg-purple-600 rounded-full"></div>
+                    Performance tracking
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 bg-purple-600 rounded-full"></div>
+                    Trend identification
+                  </li>
+                </ul>
+              </div>
+              <div className="p-8 bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                  <Users className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold mb-4">Team Optimization</h3>
+                <p className="text-gray-600 mb-4">
+                  Build and optimize team structures based on skills distribution and business objectives.
+                </p>
+                <ul className="space-y-2 text-gray-600">
+                  <li className="flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
+                    Team composition
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
+                    Role mapping
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
+                    Capacity planning
+                  </li>
+                </ul>
+              </div>
+              <div className="p-8 bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all">
+                <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                  <BookOpen className="h-6 w-6 text-indigo-600" />
+                </div>
+                <h3 className="text-xl font-bold mb-4">Development Tracking</h3>
+                <p className="text-gray-600 mb-4">
+                  Monitor and guide skill development with personalized learning paths and progress tracking.
+                </p>
+                <ul className="space-y-2 text-gray-600">
+                  <li className="flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 bg-indigo-600 rounded-full"></div>
+                    Learning paths
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 bg-indigo-600 rounded-full"></div>
+                    Progress monitoring
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 bg-indigo-600 rounded-full"></div>
+                    Certification tracking
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section id="benefits" className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-4">Why Choose ReeOrg</h2>
+            <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+              Transform your organization with our innovative approach to talent management and team optimization.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-xl shadow-md">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                  <Brain className="h-6 w-6 text-green-600" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">AI-Powered Insights</h3>
+                <p className="text-gray-600">Advanced analytics and machine learning for better decision-making.</p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-md">
+                <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+                  <Target className="h-6 w-6 text-yellow-600" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">Strategic Planning</h3>
+                <p className="text-gray-600">Data-driven approach to organizational development and growth.</p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-md">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                  <Lightbulb className="h-6 w-6 text-red-600" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">Innovation Focus</h3>
+                <p className="text-gray-600">Stay ahead with cutting-edge talent management solutions.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-xl mx-auto">
+              <h2 className="text-3xl font-bold text-center mb-4">Get Started with ReeOrg</h2>
+              <p className="text-gray-600 text-center mb-8">
+                Ready to transform your organization? Contact us to learn how ReeOrg can help.
+              </p>
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                <form className="space-y-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                    <input
+                      type="text"
+                      placeholder="Your Name"
+                      className="w-full p-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <input
+                      type="email"
+                      placeholder="Your Email"
+                      className="w-full p-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                    <textarea
+                      placeholder="How can we help?"
+                      className="w-full p-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none h-32"
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 rounded-lg hover:opacity-90 transition-all"
+                  >
+                    Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="bg-gray-900 text-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                ReeOrg
+              </h3>
+              <p className="text-gray-400">
+                Transforming organizations through skills intelligence and strategic workforce planning.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Product</h4>
+              <ul className="space-y-2">
+                <li><Link href="#features" className="text-gray-400 hover:text-white transition-colors">Features</Link></li>
+                <li><Link href="#benefits" className="text-gray-400 hover:text-white transition-colors">Benefits</Link></li>
+                <li><Link href="#about" className="text-gray-400 hover:text-white transition-colors">About</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Legal</h4>
+              <ul className="space-y-2">
+                <li><Link href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</Link></li>
+                <li><Link href="/terms-and-conditions" className="text-gray-400 hover:text-white transition-colors">Terms & Conditions</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Contact</h4>
+              <p className="text-gray-400">contact@reeorg.com</p>
+              <div className="mt-4 space-y-2">
+                <p className="text-gray-400">123 Business Street</p>
+                <p className="text-gray-400">New York, NY 10001</p>
+                <p className="text-gray-400">United States</p>
+              </div>
+            </div>
+          </div>
+          <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
+            <p>&copy; {new Date().getFullYear()} ReeOrg. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}

@@ -50,7 +50,9 @@ const FeaturesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Feature 1 */}
           <div 
-            ref={(el) => (featureRefs.current[0] = el)}
+            ref={(el) => {
+              featureRefs.current[0] = el;
+            }}
             className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm transition-all duration-500 opacity-0 translate-y-8 hover:shadow-md"
           >
             <div className="bg-blue-100 text-blue-600 p-3 rounded-lg inline-block mb-4">
@@ -79,7 +81,9 @@ const FeaturesSection = () => {
 
           {/* Feature 2 */}
           <div 
-            ref={(el) => (featureRefs.current[1] = el)}
+            ref={(el) => {
+              featureRefs.current[1] = el;
+            }}
             className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm transition-all duration-500 delay-150 opacity-0 translate-y-8 hover:shadow-md"
           >
             <div className="bg-indigo-100 text-indigo-600 p-3 rounded-lg inline-block mb-4">
@@ -108,7 +112,9 @@ const FeaturesSection = () => {
 
           {/* Feature 3 */}
           <div 
-            ref={(el) => (featureRefs.current[2] = el)}
+            ref={(el) => {
+              featureRefs.current[2] = el;
+            }}
             className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm transition-all duration-500 delay-300 opacity-0 translate-y-8 hover:shadow-md"
           >
             <div className="bg-purple-100 text-purple-600 p-3 rounded-lg inline-block mb-4">
